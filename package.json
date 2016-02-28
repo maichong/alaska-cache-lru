@@ -1,13 +1,13 @@
 {
-  "name": "alaska-lru",
-  "version": "0.1.2",
+  "name": "alaska-cache-lru",
+  "version": "0.1.3",
   "description": "Alaska LRU cache driver",
   "main": "lib/lru.js",
   "scripts": {
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maichong/alaska-lru.git"
+    "url": "git+https://github.com/maichong/alaska-cache-lru.git"
   },
   "author": {
     "email": "liang@maichong.it",
@@ -16,9 +16,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maichong/alaska-lru/issues"
+    "url": "https://github.com/maichong/alaska-cache-lru/issues"
   },
-  "homepage": "https://github.com/maichong/alaska-lru#readme",
+  "homepage": "https://github.com/maichong/alaska-cache-lru#readme",
   "dependencies": {
     "lru-cache": "^4.0.0"
   }
