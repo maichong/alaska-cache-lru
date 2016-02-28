@@ -1,6 +1,6 @@
 {
   "name": "alaska-lru",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Alaska LRU cache driver",
   "main": "lib/lru.js",
   "scripts": {

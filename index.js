@@ -11,7 +11,11 @@ const LRU = require('lru-cache');
 class LruDriver {
   constructor(options) {
     this._driver = LRU(options.options);
+    this.type = 'lru';
+    //标识已经是缓存对象实例
     this.isCacheDriver = true;
+    //标识本驱动不会序列化数据
+    this.noSerialization = true;
   }
 
   driver() {
