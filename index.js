@@ -8,7 +8,7 @@
 
 const LRU = require('lru-cache');
 
-export default class LruDriver {
+class LruDriver {
   constructor(options) {
     this._driver = LRU(options.options);
     this.isCacheDriver = true;
@@ -46,3 +46,7 @@ export default class LruDriver {
     return Promise.resolve();
   }
 }
+
+LruDriver.default = LruDriver;
+
+module.exports = LruDriver;
