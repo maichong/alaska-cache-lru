@@ -8,7 +8,7 @@
 
 const LRU = require('lru-cache');
 
-class LruDriver {
+class LruCacheDriver {
   constructor(options) {
     this._driver = LRU(options);
     this.type = 'lru';
@@ -51,6 +51,6 @@ class LruDriver {
   }
 }
 
-LruDriver.default = LruDriver;
+LruCacheDriver.default = LruCacheDriver;
 
-module.exports = LruDriver;
+module.exports = LruCacheDriver;
