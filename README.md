@@ -9,8 +9,8 @@ cache: {
   type: 'alaska-cache-lru',
   // The maximum size of the cache. default Infinity
   max: 500,
-  // Maximum age in ms
-  maxAge: 1000 * 60 * 60
+  // Maximum age in seconds
+  maxAge: 3600
   //more https://github.com/isaacs/node-lru-cache#options
 }
 

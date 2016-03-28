@@ -7,10 +7,15 @@
 'use strict';
 
 const LRU = require('lru-cache');
+const _ = require('lodash');
 
 class LruCacheDriver {
   constructor(options) {
-    this._driver = LRU(options);
+    let opts = _.assign({}, options);
+    if (opts.maxAge) {
+      opts.maxAge *= 1000;
+    }
+    this._driver = LRU(opts);
     this.type = 'lru';
     //标识已经是缓存对象实例
     this.isCacheDriver = true;
