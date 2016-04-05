@@ -8,6 +8,7 @@
 
 const LRU = require('lru-cache');
 const _ = require('lodash');
+const debug = require('debug')('alaska-cache-lru');
 
 class LruCacheDriver {
   constructor(options) {
@@ -28,6 +29,7 @@ class LruCacheDriver {
   }
 
   set(key, value, lifetime) {
+    debug('set ', key, '=>', value, '(', lifetime, ')');
     if (lifetime) {
       lifetime *= 1000;
     }
@@ -35,22 +37,28 @@ class LruCacheDriver {
   }
 
   get(key) {
-    return Promise.resolve(this._driver.get(key));
+    let value = this._driver.get(key);
+    debug('get ', key, '=>', value);
+    return Promise.resolve(value);
   }
 
   del(key) {
+    debug('del ', key);
     return Promise.resolve(this._driver.del(key));
   }
 
   has(key) {
+    debug('has ', key);
     return Promise.resolve(this._driver.has(key));
   }
 
   size() {
+    debug('size', this._driver.itemCount);
     return Promise.resolve(this._driver.itemCount);
   }
 
   flush() {
+    debug('flush');
     this._driver.reset();
     return Promise.resolve();
   }
