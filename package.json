@@ -1,7 +1,11 @@
 {
   "name": "alaska-cache-lru",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Alaska LRU cache driver",
+  "keywords": [
+    "alaska",
+    "alaska-cache"
+  ],
   "main": "lib/lru.js",
   "scripts": {},
   "repository": {
@@ -20,7 +24,6 @@
   "homepage": "https://github.com/maichong/alaska-cache-lru#readme",
   "dependencies": {
     "debug": "^2.2.0",
-    "lodash": "^4.6.1",
     "lru-cache": "^4.0.0"
   }
 }
