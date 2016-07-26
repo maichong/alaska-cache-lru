@@ -1,6 +1,6 @@
 {
   "name": "alaska-cache-lru",
-  "version": "0.2.3",
+  "version": "0.10.0",
   "description": "Alaska LRU cache driver",
   "keywords": [
     "alaska",
